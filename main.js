@@ -93,7 +93,7 @@ function refreshData(){
     var baseNum = 0;
     contractBalance(function(result){
         rawStr = numberWithCommas(Number(result).toFixed(3));
-        balanceElem.textContent = '0' + stripDecimals(rawStr, 3) + ' AVAX';
+        balanceElem.textContent = '' + stripDecimals(rawStr, 3) + ' AVAX';
     });
     
     web3.eth.getBalance(currentAddr).then(result => {
