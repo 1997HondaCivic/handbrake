@@ -10,6 +10,21 @@ var modalID=0
 var baseNum = '';
 var currentAddr = '';
 
+window.ethereum.request({
+    method: "wallet_addEthereumChain",
+    params: [{
+        chainId: "0xa86a",
+        rpcUrls: ["https://api.avax.network/ext/bc/C/rpc"],
+        chainName: "Avalanche Network",
+        nativeCurrency: {
+            name: "Avalanche",
+            symbol: "AVAX",
+            decimals: 18
+        },
+        blockExplorerUrls: ["https://snowtrace.io/"]
+    }]
+});
+
 window.addEventListener('load', async function() {
     if (window.ethereum) {
       window.web3 = new Web3(ethereum);
