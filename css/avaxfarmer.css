@@ -8,23 +8,46 @@
 .image-4 {
   padding-right: 10px;
   padding-left: 10px;
+  position: relative;
+  transition: 350ms; 
+}
+.image-4:hover
+{
+ transform: scale(1.05);
 }
 
 .image-5 {
   padding-right: 10px;
   padding-left: 10px;
+  position: relative;
+  transition: 350ms; 
+}
+.image-5:hover
+{
+ transform: scale(1.05);
 }
 
 .image-6 {
   padding-right: 10px;
   padding-left: 10px;
+  position: relative;
+  transition: 350ms; 
+}
+.image-6:hover
+{
+ transform: scale(1.05);
 }
 
 .image-7 {
   padding-right: 10px;
   padding-left: 10px;
+  position: relative;
+  transition: 350ms; 
 }
-
+.image-7:hover
+{
+ transform: scale(1.05);
+}
 .w-layout-grid {
   display: -ms-grid;
   display: grid;
