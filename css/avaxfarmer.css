@@ -24,6 +24,7 @@
   padding-right: 10px;
   padding-left: 10px;
 }
+
 .w-layout-grid {
   display: -ms-grid;
   display: grid;
@@ -3500,7 +3501,7 @@ blockquote {
   height: auto;
   max-width: 650px;
   margin-right: auto;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   margin-left: auto;
   padding: 0px 0px 24px;
   border: 0px solid #000;
