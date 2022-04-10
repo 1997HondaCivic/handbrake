@@ -3522,7 +3522,7 @@ blockquote {
 .content-copy-copy {
   overflow: hidden;
   height: auto;
-  max-width: auto;
+  max-width: 650;
   margin-right: auto;
   margin-bottom: 20px;
   margin-left: auto;
