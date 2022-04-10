@@ -3022,7 +3022,7 @@ blockquote {
 
 .your-balance {
   display: block;
-  width: 650px;
+  width: auto;
   max-width: 40rem;
   margin-top: 0rem;
   margin-right: auto;
@@ -3224,7 +3224,7 @@ blockquote {
 
 .content {
   overflow: hidden;
-  max-width: 650px;
+  max-width: auto;
   margin-right: auto;
   margin-left: auto;
   padding: 0px 0px 24px;
@@ -3509,7 +3509,7 @@ blockquote {
 .content-copy {
   overflow: hidden;
   height: 500px;
-  max-width: 650px;
+  max-width: auto;
   margin-right: auto;
   margin-left: auto;
   padding: 0px 0px 24px;
@@ -3522,7 +3522,7 @@ blockquote {
 .content-copy-copy {
   overflow: hidden;
   height: auto;
-  max-width: 650px;
+  max-width: auto;
   margin-right: auto;
   margin-bottom: 20px;
   margin-left: auto;
@@ -3998,7 +3998,7 @@ blockquote {
 
 .statitsics {
   display: block;
-  width: 650px;
+  width: auto;
   max-width: 40rem;
   margin-top: 0rem;
   margin-right: auto;
