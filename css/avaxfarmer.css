@@ -1,3 +1,16 @@
+#playerreflink {
+  padding: 2px;
+  height: 30px;
+  position: relative;
+  left: 0;
+  outline: none;
+  border: 1px solid #cdcdcd;
+  border-color: rgba(0,0,0,.15);
+  border-radius: 5px;
+  background-color: white;
+  font-size: 14px; 
+}
+
 .footer-link {
   display: block;
   margin-bottom: 10px;
