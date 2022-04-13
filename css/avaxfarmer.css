@@ -3029,7 +3029,7 @@ blockquote {
   margin-left: auto;
   padding: 2rem;
   border-radius: 0.6rem;
-  background-color: rgba(215, 223, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 1px 1px 50px 8px rgba(0, 0, 0, 0.12);
   font-family: Inter, sans-serif;
   text-align: left;
@@ -3230,7 +3230,7 @@ blockquote {
   padding: 0px 0px 24px;
   border: 0px solid #000;
   border-radius: 0.6rem;
-  background-color: rgba(215, 223, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 1px 50px 8px rgba(0, 0, 0, 0.12);
 }
 
@@ -3515,7 +3515,7 @@ blockquote {
   padding: 0px 0px 24px;
   border: 0px solid #000;
   border-radius: 0.6rem;
-  background-color: rgba(215, 223, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 1px 50px 8px rgba(0, 0, 0, 0.12);
 }
 
@@ -3529,7 +3529,7 @@ blockquote {
   padding: 0px 0px 24px;
   border: 0px solid #000;
   border-radius: 0.6rem;
-  background-color: rgba(215, 223, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 1px 50px 8px rgba(0, 0, 0, 0.12);
   text-align: center;
 }
@@ -4005,7 +4005,7 @@ blockquote {
   margin-left: auto;
   padding: 2rem;
   border-radius: 0.6rem;
-  background-color: rgba(215, 223, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 1px 1px 50px 8px rgba(0, 0, 0, 0.12);
   font-family: Inter, sans-serif;
   text-align: left;
