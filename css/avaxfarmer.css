@@ -3061,7 +3061,7 @@ blockquote {
   margin-left: auto;
   padding: 0rem 3rem 2rem;
   border-radius: 0.6rem;
-  background-color: rgba(163, 173, 209, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 1px 1px 50px 8px rgba(0, 0, 0, 0.12);
   text-align: left;
 }
