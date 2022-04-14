@@ -25,122 +25,56 @@ window.ethereum.request({
     }]
 });
 
-
-
-async function Connect() {
+window.addEventListener('load', async function() {
     if (window.ethereum) {
-        window.web3 = new Web3(ethereum)
-        try {
-            await ethereum.enable()
-
-            let accounts = await web3.eth.getAccounts()
-            currentAddr = accounts[0]
-			console.log(currentAddr)
-   			console.log("hi")         
-			runAPP()
-            return
-        } catch (error) {
-            console.error(error)
-        }
-    } else if (window.web3) {
-        window.web3 = new Web3(web3.currentProvider)
-
+      window.web3 = new Web3(ethereum);
+      try {
+        await ethereum.enable() // Request access
+        minersContract =await new web3.eth.Contract(minersAbi, minersAddr)
         let accounts = await web3.eth.getAccounts()
-        currentAddr = accounts[0]
-        console.log(currentAddr)
-        runAPP()
-        return
+        currentAddr = accounts[0]    
+        setTimeout(function(){
+            controlLoop()
+            controlLoopFaster()
+        },1000);
+      } catch (error) {
+          // User denied account access...
+          console.error(error)
+      }
     }
-    setTimeout(checkForBinanceChain, 1500)
-}
-async function checkForBinanceChain() {
-    try {
-        await window.BinanceChain.enable()
-        console.log(typeof(window.BinanceChain))
-        if (window.BinanceChain) {
-            console.log('BinanceChain')
-            await BinanceChain.enable()
-            window.web3 = new Web3(window.BinanceChain)
-            let accounts = await web3.eth.getAccounts()
-            currentAddr = accounts[0]
-            
-            console.log(contract)
-            runAPP()
-            return
-        }
-    } catch (e) {}
-}  
-
-async function runAPP(){
-    let networkID = await web3.eth.net.getId()
-    if (networkID == 43114) { // 56 - BSC Live. 97 -- BSC Test
-		contract = await new web3.eth.Contract(minersAbi, minersAddr)
-		console.log(contract)
-		tokenContract = await new web3.eth.Contract(tokenAbi, tokenAddr)
-        console.log(tokenContract)
+    // Legacy dapp browsers...
+    else if (window.web3) {
+      window.web3 = new Web3(web3.currentProvider);
+      minersContract = await new web3.eth.Contract(minersAbi, minersAddr)
+      let accounts = await web3.eth.getAccounts()
+      currentAddr = accounts[0]  
+      setTimeout(function(){
+          controlLoop()
+          controlLoopFaster()
+      },1000);
     } 
-}
-
-    setInterval(() => {				
-        if(contract){
-			$("#refString").val('https://' + window.location.host  + '/?ref=' + currentAddr)
-			
-        } 
-    }, 3000);
-        
-    setInterval(() => {
-        if(contract){
-            web3.eth.getAccounts().then(res=>{
-                currentAddr = res[0]
-            })
     
-            var connectedAddr = currentAddr[0] + 
-                                currentAddr[1] + 
-                                currentAddr[2] + 
-                                currentAddr[3] + 
-                                currentAddr[4] + '...' +
-                                currentAddr[currentAddr.length-5] + 
-                                currentAddr[currentAddr.length-4] + 
-                                currentAddr[currentAddr.length-3] + 
-                                currentAddr[currentAddr.length-2] + 
-                                currentAddr[currentAddr.length-1]
+    setTimeout(checkForBinanceChain, 1500)
+})
 
-            $("#connect-btn1").text(connectedAddr)	
-			$("#connect-btn2").text(connectedAddr)
-			
-			/*
-            contract.methods.getTokenPrice().call().then(res=>{ 
-			 	TokenPrice = (res/1e18).toFixed(6)
-			 	$("#token-price").html(`${TokenPrice}`)
-			 	$("#token-priceM").html(`${TokenPrice}`)
-             })	*/
-			
-            tokenContract.methods.balanceOf(currentAddr).call().then(res=>{
-                $("#your-balance").text((res/1e9).toFixed(2) + " TPG");
-            })	
-			
-			contract.methods.catchFishes(currentAddr).call().then(res=>{
-                $("#testScript").text(res);
-            })
-			
-			contract.methods.getFishesSinceLastCatch(currentAddr).call().then(res=>{
-				var anzahl = (res);
-				console.log("Anzahl:"+anzahl);
-				if(anzahl>0)
-					{
-					contract.methods.calculateMoneyClaim(((anzahl)).toString()).call().then(res=>{
-						console.log("Anzahl:"+anzahl);
-						 $("#your-tpg").text((res/1e9));
-					})
-					}
-            })
-			
-			
-		}
-        
-    }, 3000);
+async function checkForBinanceChain() {
+    await BinanceChain.enable()
 
+    console.log(typeof(window.BinanceChain))
 
+    if (window.BinanceChain) {
+        console.log('hmm?')
+        await BinanceChain.enable()
+        window.web3 = new Web3(BinanceChain)
+        minersContract = await new web3.eth.Contract(minersAbi, minersAddr)
+        let accounts = await web3.eth.getAccounts()
+        currentAddr = accounts[0]  
+        setTimeout(function(){
+            controlLoop()
+            controlLoopFaster()
+        },1000);
+    }
+}
 
 
 function controlLoop(){
