@@ -2425,7 +2425,7 @@ blockquote {
   align-items: center;
   border-left: 1px solid #656565;
   border-radius: 5px;
-  background-color: #29a63e;
+  background-color: #e84142;
   box-shadow: 1px 1px 3px 0 #000;
   opacity: 1;
   font-size: 16px;
@@ -2440,7 +2440,7 @@ blockquote {
 .button-clone:hover {
   border-left-color: #333;
   border-radius: 2px;
-  background-color: #9cdb54;
+  background-color: #f28686;
   opacity: 1;
   color: #fff;
 }
@@ -3655,13 +3655,13 @@ blockquote {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 5px;
-  background-color: #29a63e;
+  background-color: #e84142;
   font-family: Inter, sans-serif;
   color: #fff;
 }
 
 .navbar_button-copy.purple-copy:hover {
-  background-color: #9cdb54;
+  background-color: #f28686;
   color: #fff;
 }
 
@@ -3696,7 +3696,7 @@ blockquote {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 5px;
-  background-color: #29a63e;
+  background-color: #e84142;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   font-family: Inter, sans-serif;
@@ -3707,7 +3707,7 @@ blockquote {
 }
 
 .hire-button:hover {
-  background-color: #9cdb54;
+  background-color: #f28686;
   color: #fff;
 }
 
