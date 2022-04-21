@@ -1,3 +1,39 @@
+.app__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.app__socialslinks {
+  cursor: pointer;
+}
+
+.app__socialslinkshaze > img {
+  height: 40px;
+  width: 40px;
+  margin-left: 30px;
+  transition: 350ms;
+}
+
+.app__socialslinkshaze > img:hover {
+  transform: scale(1.05);
+}
+
+.app__socialslinks + .app__socialslinks {
+  margin-left: 30px;
+}
+
+.app__socialslinks > img {
+  height: 40px;
+  transition: 350ms;
+  color: 2px solid var(--button-primary);
+}
+
+.app__socialslinks > img:hover {
+  transform: scale(1.05);
+}
+
 #playerreflink {
   padding: 2px;
   height: 30px;
