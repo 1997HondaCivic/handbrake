@@ -158,7 +158,7 @@ function refreshData(){
     updateBuyPrice()
     updateSellPrice()
     var prldoc=document.getElementById('playerreflink')
-    prldoc.textContent=window.location.origin+"/?ref="+currentAddr
+    prldoc.textContent=window.location.origin+"/Insurance/?ref="+currentAddr
     var copyText = document.getElementById("copytextthing");
     copyText.value=prldoc.textContent
 }
