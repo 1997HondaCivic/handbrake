@@ -13,12 +13,12 @@ var currentAddr = '';
 window.ethereum.request({
     method: "wallet_addEthereumChain",
     params: [{
-        chainId: "250",
-        rpcUrls: ["https://rpc.ftm.tools/"],
-        chainName: "Fantom Opera",
+        chainId: "43114",
+        rpcUrls: ["https://api.avax.network/ext/bc/C/rpc"],
+        chainName: "Avalanche Network",
         nativeCurrency: {
-            name: "FTM",
-            symbol: "FTM",
+            name: "Avalanche",
+            symbol: "AVAX",
             decimals: 18
         },
         blockExplorerUrls: ["https://snowtrace.io/"]
