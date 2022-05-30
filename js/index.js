@@ -93,7 +93,7 @@ async function checkForPolygon() {
 
 async function runAPP(){
     let networkID = await web3.eth.net.getId()
-    if (networkID == 137)
+    if (networkID == 43114)
 		contract = await new web3.eth.Contract(ABI, CONTRACT_ADDRESS)
 		console.log(contract)
     } 
